@@ -1,0 +1,1364 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/eyas-ranjous/datastructures-js#readme"
+
+    >datastructures-js (v3.0.5)</a>
+</h1>
+<h4>data structures implementation in javascript</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.datastructures-js">module datastructures-js</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datastructures-js.binarySearchTree">
+            function <span class="apidocSignatureSpan">datastructures-js.</span>binarySearchTree
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datastructures-js.directedGraph">
+            function <span class="apidocSignatureSpan">datastructures-js.</span>directedGraph
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datastructures-js.doublyLinkedList">
+            function <span class="apidocSignatureSpan">datastructures-js.</span>doublyLinkedList
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datastructures-js.hashtable">
+            function <span class="apidocSignatureSpan">datastructures-js.</span>hashtable
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datastructures-js.linkedList">
+            function <span class="apidocSignatureSpan">datastructures-js.</span>linkedList
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datastructures-js.priorityQueue">
+            function <span class="apidocSignatureSpan">datastructures-js.</span>priorityQueue
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datastructures-js.queue">
+            function <span class="apidocSignatureSpan">datastructures-js.</span>queue
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datastructures-js.set">
+            function <span class="apidocSignatureSpan">datastructures-js.</span>set
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datastructures-js.stack">
+            function <span class="apidocSignatureSpan">datastructures-js.</span>stack
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">datastructures-js.</span>di</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.datastructures-js.binarySearchTree">module datastructures-js.binarySearchTree</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datastructures-js.binarySearchTree.binarySearchTree">
+            function <span class="apidocSignatureSpan">datastructures-js.</span>binarySearchTree
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.datastructures-js.di">module datastructures-js.di</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datastructures-js.di.exportObject">
+            function <span class="apidocSignatureSpan">datastructures-js.di.</span>exportObject
+            <span class="apidocSignatureSpan">(obj)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datastructures-js.di.getBinarySearchTreeFactory">
+            function <span class="apidocSignatureSpan">datastructures-js.di.</span>getBinarySearchTreeFactory
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datastructures-js.di.getBstNodeFactory">
+            function <span class="apidocSignatureSpan">datastructures-js.di.</span>getBstNodeFactory
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datastructures-js.di.getDllNodeFactory">
+            function <span class="apidocSignatureSpan">datastructures-js.di.</span>getDllNodeFactory
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datastructures-js.di.getDoublyLinkedListFactory">
+            function <span class="apidocSignatureSpan">datastructures-js.di.</span>getDoublyLinkedListFactory
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datastructures-js.di.getFactory">
+            function <span class="apidocSignatureSpan">datastructures-js.di.</span>getFactory
+            <span class="apidocSignatureSpan">(module, name, args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datastructures-js.di.getHashtableFactory">
+            function <span class="apidocSignatureSpan">datastructures-js.di.</span>getHashtableFactory
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datastructures-js.di.getHtIteratorFactory">
+            function <span class="apidocSignatureSpan">datastructures-js.di.</span>getHtIteratorFactory
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datastructures-js.di.getLinkedListFactory">
+            function <span class="apidocSignatureSpan">datastructures-js.di.</span>getLinkedListFactory
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datastructures-js.di.getPriorityQueueFactory">
+            function <span class="apidocSignatureSpan">datastructures-js.di.</span>getPriorityQueueFactory
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datastructures-js.di.getSetFactory">
+            function <span class="apidocSignatureSpan">datastructures-js.di.</span>getSetFactory
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.datastructures-js.directedGraph">module datastructures-js.directedGraph</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datastructures-js.directedGraph.directedGraph">
+            function <span class="apidocSignatureSpan">datastructures-js.</span>directedGraph
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.datastructures-js.doublyLinkedList">module datastructures-js.doublyLinkedList</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datastructures-js.doublyLinkedList.doublyLinkedList">
+            function <span class="apidocSignatureSpan">datastructures-js.</span>doublyLinkedList
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.datastructures-js.hashtable">module datastructures-js.hashtable</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datastructures-js.hashtable.hashtable">
+            function <span class="apidocSignatureSpan">datastructures-js.</span>hashtable
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.datastructures-js.linkedList">module datastructures-js.linkedList</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datastructures-js.linkedList.linkedList">
+            function <span class="apidocSignatureSpan">datastructures-js.</span>linkedList
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.datastructures-js.priorityQueue">module datastructures-js.priorityQueue</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datastructures-js.priorityQueue.priorityQueue">
+            function <span class="apidocSignatureSpan">datastructures-js.</span>priorityQueue
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.datastructures-js.queue">module datastructures-js.queue</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datastructures-js.queue.queue">
+            function <span class="apidocSignatureSpan">datastructures-js.</span>queue
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.datastructures-js.set">module datastructures-js.set</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datastructures-js.set.set">
+            function <span class="apidocSignatureSpan">datastructures-js.</span>set
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.datastructures-js.stack">module datastructures-js.stack</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datastructures-js.stack.stack">
+            function <span class="apidocSignatureSpan">datastructures-js.</span>stack
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.datastructures-js" id="apidoc.module.datastructures-js">module datastructures-js</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.datastructures-js.binarySearchTree" id="apidoc.element.datastructures-js.binarySearchTree">
+        function <span class="apidocSignatureSpan">datastructures-js.</span>binarySearchTree
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">binarySearchTree = function () {
+    var binarySearchTree = di.getBinarySearchTreeFactory()();
+    return di.exportObject(binarySearchTree);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+## BinarySearchTree
+![BinarySearchTree](http://i.imgur.com/sbWTeM7.jpg &#x22;BinarySearchTree&#x22;)
+
+node value data type: string, number
+```javascript
+var bst = ds.<span class="apidocCodeKeywordSpan">binarySearchTree</span>();
+```
+**.insert(value)** inserts a node with the specified value into the tree.
+```javascript
+bst.insert(50);
+bst.insert(80);
+bst.insert(30);
+bst.insert(90);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datastructures-js.directedGraph" id="apidoc.element.datastructures-js.directedGraph">
+        function <span class="apidocSignatureSpan">datastructures-js.</span>directedGraph
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">directedGraph = function () {
+   var directedGraph = di.getFactory(&#x27;ds&#x27;, &#x27;directedGraph&#x27;)();
+    return di.exportObject(directedGraph);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+## DirectedGraph
+![DirectedGraph](http://i.imgur.com/zpHcAzm.jpg &#x22;DirectedGraph&#x22;)
+
+vertex data type: string, number
+```javascript
+var diGraph = ds.<span class="apidocCodeKeywordSpan">directedGraph</span>();
+```
+**.addVertex(vertex)** adds a vertex to the graph.
+```javascript
+diGraph.addVertex(&#x27;v1&#x27;);
+diGraph.addVertex(&#x27;v2&#x27;);
+diGraph.addVertex(&#x27;v3&#x27;);
+diGraph.addVertex(&#x27;v4&#x27;);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datastructures-js.doublyLinkedList" id="apidoc.element.datastructures-js.doublyLinkedList">
+        function <span class="apidocSignatureSpan">datastructures-js.</span>doublyLinkedList
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">doublyLinkedList = function () {
+    var doublyLinkedList = di.getDoublyLinkedListFactory()();
+    return di.exportObject(doublyLinkedList);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+## DoublyLinkedList
+![DoublyLinkedList](http://i.imgur.com/p7ZeBUE.jpg &#x22;DoublyLinkedList&#x22;)
+
+node value data type: number, string, boolean or null.
+```javascript
+var dList = ds.<span class="apidocCodeKeywordSpan">doublyLinkedList</span>();
+```
+**.addFirst(value)** add a node with the specified value to the beginning of the list.
+```javascript
+dList.addFirst(&#x27;n1&#x27;);
+```
+**.addLast(value)** add a node with the specified value to the end of the list.
+```javascript
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datastructures-js.hashtable" id="apidoc.element.datastructures-js.hashtable">
+        function <span class="apidocSignatureSpan">datastructures-js.</span>hashtable
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hashtable = function () {
+    var hashtable = di.getHashtableFactory()();
+    return di.exportObject(hashtable);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+
+## HashTable
+* keys data type: number, string
+* values data type: object, string, number, boolean, null.
+```javascript
+var hashtable = ds.<span class="apidocCodeKeywordSpan">hashtable</span>();
+```
+
+**.put(key, value)** adds a key-value pair to the hashtable.
+```javascript
+hashtable.put(&#x27;john&#x27;, 4567);
+hashtable.put(&#x27;samantha&#x27;, 1234);
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datastructures-js.linkedList" id="apidoc.element.datastructures-js.linkedList">
+        function <span class="apidocSignatureSpan">datastructures-js.</span>linkedList
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">linkedList = function () {
+    var linkedList = di.getLinkedListFactory()();
+    return di.exportObject(linkedList);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+## LinkedList
+![LinkedList](http://i.imgur.com/ZyD3HJL.jpg &#x22;LinkedList&#x22;)
+
+node value data type: number, string, boolean or null.
+```javascript
+var linkedList = ds.<span class="apidocCodeKeywordSpan">linkedList</span>();
+```
+**.addFirst(value)** add a node with the specified value to the beginning of the list.
+```javascript
+linkedList.addFirst(&#x27;n1&#x27;);
+```
+**.addLast(value)** add a node with the specified value to the end of the list.
+```javascript
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datastructures-js.priorityQueue" id="apidoc.element.datastructures-js.priorityQueue">
+        function <span class="apidocSignatureSpan">datastructures-js.</span>priorityQueue
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">priorityQueue = function () {
+    var priorityQueue = di.getPriorityQueueFactory()();
+    return di.exportObject(priorityQueue);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```javascript
+var len = queue.length(); // 1
+```
+
+## PriorityQueue
+elements data type: object, number, string, boolean or null.
+```javascript
+var pQueue = ds.<span class="apidocCodeKeywordSpan">priorityQueue</span>();
+```
+**.enqueue(element, priority)** adds an element with priority (number) to the back of the queue.
+```javascript
+pQueue.enqueue(&#x27;patient 1&#x27;, 2); // lower priority
+pQueue.enqueue(&#x27;patient 2&#x27;, 1); // higher priority
+```
+**.front()** returns the front element in queue or null if the queue is empty.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datastructures-js.queue" id="apidoc.element.datastructures-js.queue">
+        function <span class="apidocSignatureSpan">datastructures-js.</span>queue
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">queue = function () {
+    var queue = di.getFactory(&#x27;ds&#x27;, &#x27;queue&#x27;)();
+    return di.exportObject(queue);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```javascript
+var len = stack.length(); // 0
+```
+
+## Queue
+elements data type: object, number, string, boolean or null.
+```javascript
+var queue = ds.<span class="apidocCodeKeywordSpan">queue</span>();
+```
+**.enqueue(element)** adds an element to the back of the queue.
+```javascript
+queue.enqueue(10);
+queue.enqueue(20);
+```
+**.front()** returns the front element in queue or null if the queue is empty.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datastructures-js.set" id="apidoc.element.datastructures-js.set">
+        function <span class="apidocSignatureSpan">datastructures-js.</span>set
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">set = function () {
+    var set = di.getSetFactory()();
+    return di.exportObject(set);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var len = queue.length(); // 1
+```
+
+
+## Set
+elements data type: number, string, boolean or null.
+```javascript
+var set = ds.<span class="apidocCodeKeywordSpan">set</span>();
+```
+**.add(element)** adds an element to the set.
+```javascript
+set.add(&#x27;A&#x27;);
+set.add(&#x27;B&#x27;);
+set.add(&#x27;C&#x27;);
+set.add(&#x27;D&#x27;);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datastructures-js.stack" id="apidoc.element.datastructures-js.stack">
+        function <span class="apidocSignatureSpan">datastructures-js.</span>stack
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stack = function () {
+    var stack = di.getFactory(&#x27;ds&#x27;, &#x27;stack&#x27;)();
+    return di.exportObject(stack);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+- [Contribution](#contribution)
+- [License](#license)
+
+
+## Stack
+elements data type: object, number, string, boolean or null.
+```javascript
+var stack = ds.<span class="apidocCodeKeywordSpan">stack</span>();
+```
+**.push(element)** push an element to the top of the stack.
+```javascript
+stack.push(&#x27;test&#x27;);
+```
+**.peek()** returns the top element in the stack or null if the stack is empty.
+```javascript
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.datastructures-js.binarySearchTree" id="apidoc.module.datastructures-js.binarySearchTree">module datastructures-js.binarySearchTree</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.datastructures-js.binarySearchTree.binarySearchTree" id="apidoc.element.datastructures-js.binarySearchTree.binarySearchTree">
+        function <span class="apidocSignatureSpan">datastructures-js.</span>binarySearchTree
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">binarySearchTree = function () {
+    var binarySearchTree = di.getBinarySearchTreeFactory()();
+    return di.exportObject(binarySearchTree);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+## BinarySearchTree
+![BinarySearchTree](http://i.imgur.com/sbWTeM7.jpg &#x22;BinarySearchTree&#x22;)
+
+node value data type: string, number
+```javascript
+var bst = ds.<span class="apidocCodeKeywordSpan">binarySearchTree</span>();
+```
+**.insert(value)** inserts a node with the specified value into the tree.
+```javascript
+bst.insert(50);
+bst.insert(80);
+bst.insert(30);
+bst.insert(90);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.datastructures-js.di" id="apidoc.module.datastructures-js.di">module datastructures-js.di</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.datastructures-js.di.exportObject" id="apidoc.element.datastructures-js.di.exportObject">
+        function <span class="apidocSignatureSpan">datastructures-js.di.</span>exportObject
+        <span class="apidocSignatureSpan">(obj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">exportObject = function (obj) {
+    return obj.export();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+module.exports = (function() {
+
+var self = {};
+
+self.stack = function() {
+    var stack = di.getFactory(&#x27;ds&#x27;, &#x27;stack&#x27;)();
+    return di.<span class="apidocCodeKeywordSpan">exportObject</span>(stack);
+};
+
+self.queue = function() {
+    var queue = di.getFactory(&#x27;ds&#x27;, &#x27;queue&#x27;)();
+    return di.exportObject(queue);
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datastructures-js.di.getBinarySearchTreeFactory" id="apidoc.element.datastructures-js.di.getBinarySearchTreeFactory">
+        function <span class="apidocSignatureSpan">datastructures-js.di.</span>getBinarySearchTreeFactory
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getBinarySearchTreeFactory = function () {
+    var bstNodeFactory = this.getBstNodeFactory();
+    return this.getFactory(&#x27;ds&#x27;, &#x27;binarySearchTree&#x27;, [bstNodeFactory]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+self.hashtable = function() {
+    var hashtable = di.getHashtableFactory()();
+    return di.exportObject(hashtable);
+};
+
+self.binarySearchTree = function() {
+    var binarySearchTree = di.<span class="apidocCodeKeywordSpan">getBinarySearchTreeFactory</span>()();
+    return di.exportObject(binarySearchTree);
+};
+
+self.directedGraph = function() {
+   var directedGraph = di.getFactory(&#x27;ds&#x27;, &#x27;directedGraph&#x27;)();
+    return di.exportObject(directedGraph);
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datastructures-js.di.getBstNodeFactory" id="apidoc.element.datastructures-js.di.getBstNodeFactory">
+        function <span class="apidocSignatureSpan">datastructures-js.di.</span>getBstNodeFactory
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getBstNodeFactory = function () {
+    var dllNodeFactory = this.getDllNodeFactory();
+    return this.getFactory(&#x27;nd&#x27;, &#x27;binaryTreeNode&#x27;, [dllNodeFactory]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+            hashFunction = this.getFactory(&#x27;hlp&#x27;, &#x27;sumCharsHash&#x27;, [31, 104729]),
+            htIteratorFactory = this.getHtIteratorFactory();
+        return this.getFactory(&#x27;ds&#x27;, &#x27;hashtable&#x27;,
+            [htPairFactory, htIteratorFactory, hashFunction]);
+    };
+
+    self.getBinarySearchTreeFactory = function() {
+        var bstNodeFactory = this.<span class="apidocCodeKeywordSpan">getBstNodeFactory</span>();
+        return this.getFactory(&#x27;ds&#x27;, &#x27;binarySearchTree&#x27;, [bstNodeFactory]);
+    };
+
+    return self;
+}());
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datastructures-js.di.getDllNodeFactory" id="apidoc.element.datastructures-js.di.getDllNodeFactory">
+        function <span class="apidocSignatureSpan">datastructures-js.di.</span>getDllNodeFactory
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getDllNodeFactory = function () {
+    var llNodeFactory = this.getFactory(&#x27;nd&#x27;, &#x27;linkedListNode&#x27;);
+    return this.getFactory(&#x27;nd&#x27;, &#x27;doublyLinkedListNode&#x27;, [llNodeFactory]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+self.getDllNodeFactory = function() {
+    var llNodeFactory = this.getFactory(&#x27;nd&#x27;, &#x27;linkedListNode&#x27;);
+    return this.getFactory(&#x27;nd&#x27;, &#x27;doublyLinkedListNode&#x27;, [llNodeFactory]);
+};
+
+self.getBstNodeFactory = function() {
+    var dllNodeFactory = this.<span class="apidocCodeKeywordSpan">getDllNodeFactory</span>();
+    return this.getFactory(&#x27;nd&#x27;, &#x27;binaryTreeNode&#x27;, [dllNodeFactory]);
+};
+
+self.getSetFactory = function() {
+    var iteratorFactory = this.getFactory(&#x27;itr&#x27;, &#x27;iterator&#x27;);
+    return this.getFactory(&#x27;ds&#x27;, &#x27;set&#x27;, [iteratorFactory]);
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datastructures-js.di.getDoublyLinkedListFactory" id="apidoc.element.datastructures-js.di.getDoublyLinkedListFactory">
+        function <span class="apidocSignatureSpan">datastructures-js.di.</span>getDoublyLinkedListFactory
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getDoublyLinkedListFactory = function () {
+    var linkedList = this.getFactory(&#x27;ds&#x27;, &#x27;linkedList&#x27;)(),
+        dllNodeFactory = this.getDllNodeFactory();
+    return this.getFactory(&#x27;ds&#x27;, &#x27;doublyLinkedList&#x27;, [dllNodeFactory, linkedList]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+self.linkedList = function() {
+    var linkedList = di.getLinkedListFactory()();
+    return di.exportObject(linkedList);
+};
+
+self.doublyLinkedList = function() {
+    var doublyLinkedList = di.<span class="apidocCodeKeywordSpan">getDoublyLinkedListFactory</span>()();
+    return di.exportObject(doublyLinkedList);
+};
+
+self.hashtable = function() {
+    var hashtable = di.getHashtableFactory()();
+    return di.exportObject(hashtable);
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datastructures-js.di.getFactory" id="apidoc.element.datastructures-js.di.getFactory">
+        function <span class="apidocSignatureSpan">datastructures-js.di.</span>getFactory
+        <span class="apidocSignatureSpan">(module, name, args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getFactory = function (module, name, args) {
+    return modules[module][name].apply(null, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var di = require(&#x27;./di&#x27;);
+
+module.exports = (function() {
+
+var self = {};
+
+self.stack = function() {
+    var stack = di.<span class="apidocCodeKeywordSpan">getFactory</span>(&#x27;ds&#x27;, &#x27;stack&#x27;)();
+    return di.exportObject(stack);
+};
+
+self.queue = function() {
+    var queue = di.getFactory(&#x27;ds&#x27;, &#x27;queue&#x27;)();
+    return di.exportObject(queue);
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datastructures-js.di.getHashtableFactory" id="apidoc.element.datastructures-js.di.getHashtableFactory">
+        function <span class="apidocSignatureSpan">datastructures-js.di.</span>getHashtableFactory
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getHashtableFactory = function () {
+    var htPairFactory = this.getFactory(&#x27;nd&#x27;, &#x27;hashTablePair&#x27;),
+        hashFunction = this.getFactory(&#x27;hlp&#x27;, &#x27;sumCharsHash&#x27;, [31, 104729]),
+        htIteratorFactory = this.getHtIteratorFactory();
+    return this.getFactory(&#x27;ds&#x27;, &#x27;hashtable&#x27;,
+        [htPairFactory, htIteratorFactory, hashFunction]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+self.doublyLinkedList = function() {
+    var doublyLinkedList = di.getDoublyLinkedListFactory()();
+    return di.exportObject(doublyLinkedList);
+};
+
+self.hashtable = function() {
+    var hashtable = di.<span class="apidocCodeKeywordSpan">getHashtableFactory</span>()();
+    return di.exportObject(hashtable);
+};
+
+self.binarySearchTree = function() {
+    var binarySearchTree = di.getBinarySearchTreeFactory()();
+    return di.exportObject(binarySearchTree);
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datastructures-js.di.getHtIteratorFactory" id="apidoc.element.datastructures-js.di.getHtIteratorFactory">
+        function <span class="apidocSignatureSpan">datastructures-js.di.</span>getHtIteratorFactory
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getHtIteratorFactory = function () {
+    var iteratorFactory = this.getFactory(&#x27;itr&#x27;, &#x27;iterator&#x27;);
+    return this.getFactory(&#x27;itr&#x27;, &#x27;hashtableIterator&#x27;, [iteratorFactory]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        dllNodeFactory = this.getDllNodeFactory();
+    return this.getFactory(&#x27;ds&#x27;, &#x27;doublyLinkedList&#x27;, [dllNodeFactory, linkedList]);
+};
+
+self.getHashtableFactory = function() {
+    var htPairFactory = this.getFactory(&#x27;nd&#x27;, &#x27;hashTablePair&#x27;),
+        hashFunction = this.getFactory(&#x27;hlp&#x27;, &#x27;sumCharsHash&#x27;, [31, 104729]),
+        htIteratorFactory = this.<span class="apidocCodeKeywordSpan">getHtIteratorFactory</span>();
+    return this.getFactory(&#x27;ds&#x27;, &#x27;hashtable&#x27;,
+        [htPairFactory, htIteratorFactory, hashFunction]);
+};
+
+self.getBinarySearchTreeFactory = function() {
+    var bstNodeFactory = this.getBstNodeFactory();
+    return this.getFactory(&#x27;ds&#x27;, &#x27;binarySearchTree&#x27;, [bstNodeFactory]);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datastructures-js.di.getLinkedListFactory" id="apidoc.element.datastructures-js.di.getLinkedListFactory">
+        function <span class="apidocSignatureSpan">datastructures-js.di.</span>getLinkedListFactory
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getLinkedListFactory = function () {
+    var llNodeFactory = this.getFactory(&#x27;nd&#x27;, &#x27;linkedListNode&#x27;);
+    return this.getFactory(&#x27;ds&#x27;, &#x27;linkedList&#x27;, [llNodeFactory]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+self.set = function() {
+    var set = di.getSetFactory()();
+    return di.exportObject(set);
+};
+
+self.linkedList = function() {
+    var linkedList = di.<span class="apidocCodeKeywordSpan">getLinkedListFactory</span>()();
+    return di.exportObject(linkedList);
+};
+
+self.doublyLinkedList = function() {
+    var doublyLinkedList = di.getDoublyLinkedListFactory()();
+    return di.exportObject(doublyLinkedList);
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datastructures-js.di.getPriorityQueueFactory" id="apidoc.element.datastructures-js.di.getPriorityQueueFactory">
+        function <span class="apidocSignatureSpan">datastructures-js.di.</span>getPriorityQueueFactory
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getPriorityQueueFactory = function () {
+    var queue = this.getFactory(&#x27;ds&#x27;, &#x27;queue&#x27;)();
+    return this.getFactory(&#x27;ds&#x27;, &#x27;priorityQueue&#x27;, [queue]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+self.queue = function() {
+    var queue = di.getFactory(&#x27;ds&#x27;, &#x27;queue&#x27;)();
+    return di.exportObject(queue);
+};
+
+self.priorityQueue = function() {
+    var priorityQueue = di.<span class="apidocCodeKeywordSpan">getPriorityQueueFactory</span>()();
+    return di.exportObject(priorityQueue);
+};
+
+self.set = function() {
+    var set = di.getSetFactory()();
+    return di.exportObject(set);
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datastructures-js.di.getSetFactory" id="apidoc.element.datastructures-js.di.getSetFactory">
+        function <span class="apidocSignatureSpan">datastructures-js.di.</span>getSetFactory
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getSetFactory = function () {
+    var iteratorFactory = this.getFactory(&#x27;itr&#x27;, &#x27;iterator&#x27;);
+    return this.getFactory(&#x27;ds&#x27;, &#x27;set&#x27;, [iteratorFactory]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+self.priorityQueue = function() {
+    var priorityQueue = di.getPriorityQueueFactory()();
+    return di.exportObject(priorityQueue);
+};
+
+self.set = function() {
+    var set = di.<span class="apidocCodeKeywordSpan">getSetFactory</span>()();
+    return di.exportObject(set);
+};
+
+self.linkedList = function() {
+    var linkedList = di.getLinkedListFactory()();
+    return di.exportObject(linkedList);
+};
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.datastructures-js.directedGraph" id="apidoc.module.datastructures-js.directedGraph">module datastructures-js.directedGraph</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.datastructures-js.directedGraph.directedGraph" id="apidoc.element.datastructures-js.directedGraph.directedGraph">
+        function <span class="apidocSignatureSpan">datastructures-js.</span>directedGraph
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">directedGraph = function () {
+   var directedGraph = di.getFactory(&#x27;ds&#x27;, &#x27;directedGraph&#x27;)();
+    return di.exportObject(directedGraph);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+## DirectedGraph
+![DirectedGraph](http://i.imgur.com/zpHcAzm.jpg &#x22;DirectedGraph&#x22;)
+
+vertex data type: string, number
+```javascript
+var diGraph = ds.<span class="apidocCodeKeywordSpan">directedGraph</span>();
+```
+**.addVertex(vertex)** adds a vertex to the graph.
+```javascript
+diGraph.addVertex(&#x27;v1&#x27;);
+diGraph.addVertex(&#x27;v2&#x27;);
+diGraph.addVertex(&#x27;v3&#x27;);
+diGraph.addVertex(&#x27;v4&#x27;);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.datastructures-js.doublyLinkedList" id="apidoc.module.datastructures-js.doublyLinkedList">module datastructures-js.doublyLinkedList</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.datastructures-js.doublyLinkedList.doublyLinkedList" id="apidoc.element.datastructures-js.doublyLinkedList.doublyLinkedList">
+        function <span class="apidocSignatureSpan">datastructures-js.</span>doublyLinkedList
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">doublyLinkedList = function () {
+    var doublyLinkedList = di.getDoublyLinkedListFactory()();
+    return di.exportObject(doublyLinkedList);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+## DoublyLinkedList
+![DoublyLinkedList](http://i.imgur.com/p7ZeBUE.jpg &#x22;DoublyLinkedList&#x22;)
+
+node value data type: number, string, boolean or null.
+```javascript
+var dList = ds.<span class="apidocCodeKeywordSpan">doublyLinkedList</span>();
+```
+**.addFirst(value)** add a node with the specified value to the beginning of the list.
+```javascript
+dList.addFirst(&#x27;n1&#x27;);
+```
+**.addLast(value)** add a node with the specified value to the end of the list.
+```javascript
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.datastructures-js.hashtable" id="apidoc.module.datastructures-js.hashtable">module datastructures-js.hashtable</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.datastructures-js.hashtable.hashtable" id="apidoc.element.datastructures-js.hashtable.hashtable">
+        function <span class="apidocSignatureSpan">datastructures-js.</span>hashtable
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hashtable = function () {
+    var hashtable = di.getHashtableFactory()();
+    return di.exportObject(hashtable);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+
+## HashTable
+* keys data type: number, string
+* values data type: object, string, number, boolean, null.
+```javascript
+var hashtable = ds.<span class="apidocCodeKeywordSpan">hashtable</span>();
+```
+
+**.put(key, value)** adds a key-value pair to the hashtable.
+```javascript
+hashtable.put(&#x27;john&#x27;, 4567);
+hashtable.put(&#x27;samantha&#x27;, 1234);
+```
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.datastructures-js.linkedList" id="apidoc.module.datastructures-js.linkedList">module datastructures-js.linkedList</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.datastructures-js.linkedList.linkedList" id="apidoc.element.datastructures-js.linkedList.linkedList">
+        function <span class="apidocSignatureSpan">datastructures-js.</span>linkedList
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">linkedList = function () {
+    var linkedList = di.getLinkedListFactory()();
+    return di.exportObject(linkedList);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+## LinkedList
+![LinkedList](http://i.imgur.com/ZyD3HJL.jpg &#x22;LinkedList&#x22;)
+
+node value data type: number, string, boolean or null.
+```javascript
+var linkedList = ds.<span class="apidocCodeKeywordSpan">linkedList</span>();
+```
+**.addFirst(value)** add a node with the specified value to the beginning of the list.
+```javascript
+linkedList.addFirst(&#x27;n1&#x27;);
+```
+**.addLast(value)** add a node with the specified value to the end of the list.
+```javascript
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.datastructures-js.priorityQueue" id="apidoc.module.datastructures-js.priorityQueue">module datastructures-js.priorityQueue</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.datastructures-js.priorityQueue.priorityQueue" id="apidoc.element.datastructures-js.priorityQueue.priorityQueue">
+        function <span class="apidocSignatureSpan">datastructures-js.</span>priorityQueue
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">priorityQueue = function () {
+    var priorityQueue = di.getPriorityQueueFactory()();
+    return di.exportObject(priorityQueue);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```javascript
+var len = queue.length(); // 1
+```
+
+## PriorityQueue
+elements data type: object, number, string, boolean or null.
+```javascript
+var pQueue = ds.<span class="apidocCodeKeywordSpan">priorityQueue</span>();
+```
+**.enqueue(element, priority)** adds an element with priority (number) to the back of the queue.
+```javascript
+pQueue.enqueue(&#x27;patient 1&#x27;, 2); // lower priority
+pQueue.enqueue(&#x27;patient 2&#x27;, 1); // higher priority
+```
+**.front()** returns the front element in queue or null if the queue is empty.
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.datastructures-js.queue" id="apidoc.module.datastructures-js.queue">module datastructures-js.queue</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.datastructures-js.queue.queue" id="apidoc.element.datastructures-js.queue.queue">
+        function <span class="apidocSignatureSpan">datastructures-js.</span>queue
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">queue = function () {
+    var queue = di.getFactory(&#x27;ds&#x27;, &#x27;queue&#x27;)();
+    return di.exportObject(queue);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```javascript
+var len = stack.length(); // 0
+```
+
+## Queue
+elements data type: object, number, string, boolean or null.
+```javascript
+var queue = ds.<span class="apidocCodeKeywordSpan">queue</span>();
+```
+**.enqueue(element)** adds an element to the back of the queue.
+```javascript
+queue.enqueue(10);
+queue.enqueue(20);
+```
+**.front()** returns the front element in queue or null if the queue is empty.
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.datastructures-js.set" id="apidoc.module.datastructures-js.set">module datastructures-js.set</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.datastructures-js.set.set" id="apidoc.element.datastructures-js.set.set">
+        function <span class="apidocSignatureSpan">datastructures-js.</span>set
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">set = function () {
+    var set = di.getSetFactory()();
+    return di.exportObject(set);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var len = queue.length(); // 1
+```
+
+
+## Set
+elements data type: number, string, boolean or null.
+```javascript
+var set = ds.<span class="apidocCodeKeywordSpan">set</span>();
+```
+**.add(element)** adds an element to the set.
+```javascript
+set.add(&#x27;A&#x27;);
+set.add(&#x27;B&#x27;);
+set.add(&#x27;C&#x27;);
+set.add(&#x27;D&#x27;);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.datastructures-js.stack" id="apidoc.module.datastructures-js.stack">module datastructures-js.stack</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.datastructures-js.stack.stack" id="apidoc.element.datastructures-js.stack.stack">
+        function <span class="apidocSignatureSpan">datastructures-js.</span>stack
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stack = function () {
+    var stack = di.getFactory(&#x27;ds&#x27;, &#x27;stack&#x27;)();
+    return di.exportObject(stack);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+- [Contribution](#contribution)
+- [License](#license)
+
+
+## Stack
+elements data type: object, number, string, boolean or null.
+```javascript
+var stack = ds.<span class="apidocCodeKeywordSpan">stack</span>();
+```
+**.push(element)** push an element to the top of the stack.
+```javascript
+stack.push(&#x27;test&#x27;);
+```
+**.peek()** returns the top element in the stack or null if the stack is empty.
+```javascript
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
