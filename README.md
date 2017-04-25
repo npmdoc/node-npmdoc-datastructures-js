@@ -1,4 +1,7 @@
-# api documentation for  [datastructures-js (v3.0.5)](https://github.com/eyas-ranjous/datastructures-js#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-datastructures-js.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-datastructures-js) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-datastructures-js.svg)](https://travis-ci.org/npmdoc/node-npmdoc-datastructures-js)
+# npmdoc-datastructures-js
+
+#### basic api documentation for  [datastructures-js (v3.0.5)](https://github.com/eyas-ranjous/datastructures-js#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-datastructures-js.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-datastructures-js) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-datastructures-js.svg)](https://travis-ci.org/npmdoc/node-npmdoc-datastructures-js)
+
 #### data structures implementation in javascript
 
 [![NPM](https://nodei.co/npm/datastructures-js.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/datastructures-js)
@@ -75,7 +78,8 @@
     "scripts": {
         "test": "grunt test"
     },
-    "version": "3.0.5"
+    "version": "3.0.5",
+    "bin": {}
 }
 ```
 
